@@ -4207,13 +4207,12 @@ fi
 fi
 echo "$as_me:$LINENO: result: $ac_cv_header_stdc" >&5
 echo "${ECHO_T}$ac_cv_header_stdc" >&6
-if test $ac_cv_header_stdc = yes; then
 
+# its 2024 bro
 cat >>confdefs.h <<\_ACEOF
 #define STDC_HEADERS 1
 _ACEOF
 
-fi
 
 # On IRIX 5.3, sys/types and inttypes.h are conflicting.
 

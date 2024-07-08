@@ -26,13 +26,16 @@ if [ -z "$TARGET_CROSS" ]; then
 fi
 
 # Arguments to use
-export CFLAGS="$NIX_CFLAGS_COMPILE -Wno-int-conversion"
+#export CFLAGS="$NIX_CFLAGS_COMPILE -Wno-int-conversion"
+export CFLAGS="-Wno-int-conversion -Wno-incompatible-function-pointer-types -no-pie"
+#export CXXFLAGS="${CFLAGS} -fpermissive -fno-exceptions -Wno-register -std=c++17"
 export CXXFLAGS="${CFLAGS} -fpermissive -fno-exceptions -Wno-register -std=c++17"
 export CPPFLAGS=""
 export CXXCPPFLAGS=""
 export LIBS=""
 export EXTRA_LIBS=""
 export PARMACS_MACRO_FILE="pthreads"
+#export LDFLAGS="$NIX_LDFLAGS"
 export LDFLAGS=""
 
 # Java
